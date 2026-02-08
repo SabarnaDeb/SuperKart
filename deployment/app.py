@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from huggingface_hub import hf_hub_download
 from pydantic import BaseModel
 
-MODEL_REPO = os.environ.get("MODEL_REPO", "YOUR_USERNAME/YOUR_MODEL_REPO")
+MODEL_REPO = os.environ.get("MODEL_REPO", "SabarnaDeb/superkart-sales-rf")
 MODEL_FILENAME = os.environ.get("MODEL_FILENAME", "superkart_best_model.joblib")
 
 # If model repo is private, set HF_TOKEN (or HUGGINGFACE_HUB_TOKEN) in Space secrets
