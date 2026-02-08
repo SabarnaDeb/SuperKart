@@ -68,6 +68,8 @@ jobs:
           python src/train.py
 
       - name: Evaluate model
+        env:
+          HF_DATASET_REPO: ${{ secrets.HF_DATASET_REPO }}
         run: |
           python src/evaluate.py
 
