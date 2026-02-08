@@ -28,6 +28,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
+      - name: Install runtime dependencies (for tests)
+        run: |
+          pip install -r deployment/requirements.txt
+
       - name: Run formatting (black)
         run: |
           black --check .
